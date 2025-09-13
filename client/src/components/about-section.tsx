@@ -61,7 +61,7 @@ export function AboutSection() {
                   <div>
                     <strong className="text-foreground">Bachelor of Science in Computer Science</strong> - Bowen University (2024)
                   </div>
-                  <div>CGPA: 4.61/5.0 (First-Class Honors)</div>
+                  <div>First-Class Honors</div>
                   <div>Majors: Data Management, Software Engineering, Machine Learning, Project Management</div>
                 </div>
               </div>

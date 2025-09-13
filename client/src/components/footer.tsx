@@ -51,11 +51,6 @@ export function Footer() {
             </div>
           </div>
           
-          <div className="mt-8 pt-8 border-t border-border text-center">
-            <p className="text-sm text-muted-foreground" data-testid="tech-stack">
-              Built with React, TypeScript, and Tailwind CSS. Designed for performance, accessibility, and user experience.
-            </p>
-          </div>
         </div>
       </div>
     </footer>

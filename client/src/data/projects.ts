@@ -21,18 +21,18 @@ export const projects: Project[] = [
   {
     id: "multimodal-dr-classification",
     title: "Multi-Modal Data Fusion for Diabetic Retinopathy",
-    description: "Developed federated learning model combining fundus images with EHR data using multi-head attention mechanism. Paper currently in review at IEEE.",
+    description: "Developed federated learning model combining fundus images with EHR data using multi-head attention mechanism.",
     longDescription: "This study develops a multi-modal architecture for diabetic retinopathy (DR) severity grading that integrates fundus images and electronic health record (EHR) features within a federated learning framework for privacy-preserving, distributed training. The approach combines ResNet-18 CNN for image analysis with a multilayer perceptron for EHR inputs, using a multi-head attention mechanism to enhance image features based on EHR context.",
     category: "Research",
     tags: ["PyTorch", "FedML", "ResNet-18", "Attention", "Medical AI"],
     metrics: [
-      { label: "Status", value: "IEEE Review", color: "blue" },
-      { label: "Privacy", value: "Federated", color: "green" },
+      { label: "Privacy", value: "Federated", color: "blue" },
+      { label: "Architecture", value: "Multi-Modal", color: "green" },
       { label: "Modalities", value: "Image + EHR", color: "purple" }
     ],
     date: "July 2025",
-    status: "Under Review",
-    imageUrl: "/projects/diabetic-retinopathy.jpg"
+    status: "Complete",
+    imageUrl: "@assets/generated_images/Medical_AI_retinal_analysis_c814a962.png"
   },
   {
     id: "creditworthiness-prediction",
@@ -49,7 +49,7 @@ export const projects: Project[] = [
     date: "January 2025",
     status: "Complete",
     githubUrl: "https://github.com/John-gram",
-    imageUrl: "/projects/creditworthiness.jpg"
+    imageUrl: "@assets/generated_images/Credit_assessment_dashboard_9450068b.png"
   },
   {
     id: "real-estate-prediction",
@@ -66,7 +66,7 @@ export const projects: Project[] = [
     date: "July 2024",
     status: "Complete",
     githubUrl: "https://github.com/John-gram",
-    imageUrl: "/projects/real-estate.jpg"
+    imageUrl: "@assets/generated_images/Real_estate_analytics_47e803f5.png"
   },
   {
     id: "covid-data-exploration",
@@ -83,7 +83,7 @@ export const projects: Project[] = [
     date: "September 2023",
     status: "Complete",
     githubUrl: "https://github.com/John-gram/DataAnalyticsProject/blob/main/SQLQuery2.sql",
-    imageUrl: "/projects/covid-analysis.jpg"
+    imageUrl: "@assets/generated_images/COVID_data_exploration_17423a9b.png"
   },
   {
     id: "tableau-dashboards",
@@ -100,7 +100,7 @@ export const projects: Project[] = [
     date: "2023-2024",
     status: "Complete",
     liveUrl: "https://public.tableau.com/app/profile/john.ezembu/viz/TorontoAirBnBInsightsProject/Dashboard1",
-    imageUrl: "/projects/tableau-dashboards.jpg"
+    imageUrl: "@assets/generated_images/Tableau_dashboard_showcase_c7db63f4.png"
   },
   {
     id: "automated-file-organizer",
@@ -117,7 +117,7 @@ export const projects: Project[] = [
     date: "2023",
     status: "Complete",
     githubUrl: "https://github.com/John-gram/Python-Projects/blob/main/Automatic%20File%20Sorter%20in%20File%20Explorer.ipynb",
-    imageUrl: "/projects/file-organizer.jpg"
+    imageUrl: "@assets/generated_images/File_organization_automation_9d45b8ad.png"
   }
 ];
 

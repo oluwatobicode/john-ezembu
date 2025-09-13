@@ -6,6 +6,14 @@ import { ExternalLink, Github } from "lucide-react";
 import { motion } from "framer-motion";
 import { projects, projectCategories } from "@/data/projects";
 
+// Import generated project images
+import medicalAIImage from "@assets/generated_images/Medical_AI_retinal_analysis_c814a962.png";
+import creditImage from "@assets/generated_images/Credit_assessment_dashboard_9450068b.png";
+import realEstateImage from "@assets/generated_images/Real_estate_analytics_47e803f5.png";
+import covidImage from "@assets/generated_images/COVID_data_exploration_17423a9b.png";
+import tableauImage from "@assets/generated_images/Tableau_dashboard_showcase_c7db63f4.png";
+import fileOrgImage from "@assets/generated_images/File_organization_automation_9d45b8ad.png";
+
 export function ProjectsSection() {
   const [activeFilter, setActiveFilter] = useState("All");
 
@@ -20,6 +28,18 @@ export function ProjectsSection() {
       case "purple": return "text-purple-600 dark:text-purple-400";
       case "orange": return "text-orange-600 dark:text-orange-400";
       default: return "text-muted-foreground";
+    }
+  };
+
+  const getProjectImage = (projectId: string) => {
+    switch (projectId) {
+      case "multimodal-dr-classification": return medicalAIImage;
+      case "creditworthiness-prediction": return creditImage;
+      case "real-estate-prediction": return realEstateImage;
+      case "covid-data-exploration": return covidImage;
+      case "tableau-dashboards": return tableauImage;
+      case "automated-file-organizer": return fileOrgImage;
+      default: return null;
     }
   };
 
@@ -76,38 +96,15 @@ export function ProjectsSection() {
                       <span className="text-xs text-muted-foreground">{project.date}</span>
                     </div>
                     
-                    {/* Project Image Placeholder */}
-                    <div className="w-full h-48 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg mb-4 flex items-center justify-center">
-                      <div className="text-center">
-                        <div className="w-16 h-16 mx-auto mb-2 opacity-50">
-                          {project.category === "Research" && (
-                            <svg className="w-16 h-16 text-primary/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
-                            </svg>
-                          )}
-                          {project.category === "Machine Learning" && (
-                            <svg className="w-16 h-16 text-primary/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-                            </svg>
-                          )}
-                          {(project.category === "Regression" || project.category === "Data Engineering") && (
-                            <svg className="w-16 h-16 text-primary/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/>
-                            </svg>
-                          )}
-                          {project.category === "Visualization" && (
-                            <svg className="w-16 h-16 text-primary/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/>
-                            </svg>
-                          )}
-                          {project.category === "Automation" && (
-                            <svg className="w-16 h-16 text-primary/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
-                            </svg>
-                          )}
-                        </div>
-                      </div>
+                    {/* Project Image */}
+                    <div className="w-full h-48 rounded-lg mb-4 overflow-hidden relative group">
+                      <img 
+                        src={getProjectImage(project.id) || ""}
+                        alt={`${project.title} visualization`}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 shimmer"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
                     
                     <div className="flex-1">
