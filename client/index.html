@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>John Ezembu - Data Scientist & AI Automation Engineer</title>
+    <meta name="description" content="Data Scientist & AI Automation Engineer specializing in machine learning, federated learning, and AI-powered analytics. View my portfolio of data science projects and research.">
+    
+    <!-- SEO and Social Media -->
+    <meta property="og:title" content="John Ezembu - Data Scientist & AI Automation Engineer">
+    <meta property="og:description" content="Data Scientist & AI Automation Engineer specializing in machine learning, federated learning, and AI-powered analytics.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#A71E1E">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    
+    <!-- Preconnect to fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Prevent FOUC -->
+    <script>
+      // Apply theme before page render
+      (function() {
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+        document.documentElement.classList.toggle('dark', theme === 'dark');
+        document.documentElement.style.colorScheme = theme;
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- Skip to Content for Accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-primary-foreground px-4 py-2 rounded-md z-50">Skip to main content</a>
+    
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "John Ezembu",
+        "jobTitle": "Data Scientist & AI Automation Engineer",
+        "email": "johnezembu12@gmail.com",
+        "telephone": "+234-704-911-0011",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Lagos",
+            "addressCountry": "Nigeria"
+        },
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Bowen University"
+        },
+        "knowsAbout": ["Data Science", "Machine Learning", "Artificial Intelligence", "Federated Learning", "Python", "SQL"],
+        "sameAs": [
+            "https://www.linkedin.com/in/john-ezembu",
+            "https://github.com/John-gram"
+        ]
+    }
+    </script>
+  </body>
+</html>
