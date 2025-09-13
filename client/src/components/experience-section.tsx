@@ -15,8 +15,8 @@ export function ExperienceSection() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4" data-testid="experience-title">
-              Professional Experience
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4" data-testid="experience-title">
+              <span className="gradient-text">Professional Experience</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto" data-testid="experience-subtitle">
               My journey in data science and analytics, delivering measurable business impact through data-driven solutions.
@@ -32,7 +32,7 @@ export function ExperienceSection() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card data-testid={`experience-card-${experience.id}`}>
+                <Card data-testid={`experience-card-${experience.id}`} className="card-hover shimmer">
                   <CardContent className="p-6">
                     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                       <div>
@@ -93,8 +93,8 @@ export function ExperienceSection() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-bold text-foreground" data-testid="leadership-title">
-                Leadership & Volunteering
+              <h3 className="text-2xl font-bold" data-testid="leadership-title">
+                <span className="gradient-text">Leadership & Volunteering</span>
               </h3>
             </motion.div>
             
@@ -107,7 +107,7 @@ export function ExperienceSection() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <Card data-testid={`leadership-card-${item.id}`}>
+                  <Card data-testid={`leadership-card-${item.id}`} className="card-hover shimmer">
                     <CardContent className="p-6">
                       <div className="flex items-center justify-between mb-4">
                         <h4 className="text-lg font-semibold text-foreground" data-testid={`leadership-title-${item.id}`}>

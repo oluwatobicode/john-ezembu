@@ -16,8 +16,8 @@ export function ResearchSection() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4" data-testid="research-title">
-              Research & Publications
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4" data-testid="research-title">
+              <span className="gradient-text">Research & Publications</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto" data-testid="research-subtitle">
               Contributing to the advancement of machine learning and federated learning through academic research.
@@ -30,7 +30,7 @@ export function ResearchSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <Card data-testid="research-paper-card">
+            <Card data-testid="research-paper-card" className="card-hover shimmer">
               <CardContent className="p-8">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -93,6 +93,7 @@ export function ResearchSection() {
                         <Button 
                           variant="outline" 
                           size="sm"
+                          className="shimmer hover:scale-105 transition-transform"
                           data-testid="button-view-abstract"
                         >
                           View Abstract

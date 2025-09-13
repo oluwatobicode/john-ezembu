@@ -67,8 +67,8 @@ export function ContactSection() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4" data-testid="contact-title">
-              Get In Touch
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4" data-testid="contact-title">
+              <span className="gradient-text">Get In Touch</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto" data-testid="contact-subtitle">
               Ready to collaborate on your next data science project or discuss opportunities? I'd love to hear from you.
@@ -180,7 +180,7 @@ export function ContactSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <Card data-testid="contact-form-card">
+              <Card data-testid="contact-form-card" className="card-hover shimmer">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold text-foreground mb-6" data-testid="contact-form-title">
                     Send a Message
@@ -253,7 +253,7 @@ export function ContactSection() {
                     
                     <Button 
                       type="submit" 
-                      className="w-full"
+                      className="w-full shimmer hover:scale-105 transition-transform"
                       disabled={contactMutation.isPending}
                       data-testid="button-send-message"
                     >

@@ -6,7 +6,6 @@ import { ProjectsSection } from "@/components/projects-section";
 import { ExperienceSection } from "@/components/experience-section";
 import { ResearchSection } from "@/components/research-section";
 import { ContactSection } from "@/components/contact-section";
-import { AIChatWidget } from "@/components/ai-chat-widget";
 import { Footer } from "@/components/footer";
 
 export default function Home() {
@@ -52,7 +51,6 @@ export default function Home() {
       </main>
       
       <Footer />
-      <AIChatWidget />
     </div>
   );
 }

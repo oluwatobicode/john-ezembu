@@ -34,8 +34,8 @@ export function ProjectsSection() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4" data-testid="projects-title">
-              Featured Projects
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4" data-testid="projects-title">
+              <span className="gradient-text">Featured Projects</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto" data-testid="projects-subtitle">
               A showcase of my data science and machine learning projects, from research to real-world applications.
@@ -67,7 +67,7 @@ export function ProjectsSection() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full shadow-sm hover:shadow-md transition-shadow" data-testid={`project-card-${project.id}`}>
+                <Card className="h-full shadow-sm hover:shadow-md transition-shadow card-hover shimmer" data-testid={`project-card-${project.id}`}>
                   <CardContent className="p-6 flex flex-col h-full">
                     <div className="flex items-center justify-between mb-4">
                       <Badge variant="outline" className="text-primary border-primary/20">

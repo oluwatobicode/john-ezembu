@@ -22,8 +22,8 @@ export function AboutSection() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4" data-testid="about-title">
-              About Me
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4" data-testid="about-title">
+              <span className="gradient-text">About Me</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto" data-testid="about-subtitle">
               A results-driven Data Scientist with First-Class Honors in Computer Science, 
@@ -74,7 +74,7 @@ export function AboutSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <Card data-testid="skills-card">
+              <Card data-testid="skills-card" className="card-hover shimmer">
                 <CardContent className="p-6">
                   <h3 className="text-lg font-semibold text-foreground mb-4">Core Skills</h3>
                   <div className="space-y-3">
@@ -99,7 +99,7 @@ export function AboutSection() {
                 </CardContent>
               </Card>
               
-              <Card data-testid="contact-info-card">
+              <Card data-testid="contact-info-card" className="card-hover shimmer">
                 <CardContent className="p-6">
                   <h3 className="text-lg font-semibold text-foreground mb-4">Contact Info</h3>
                   <div className="space-y-3">
