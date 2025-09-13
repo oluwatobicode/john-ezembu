@@ -48,8 +48,7 @@ export function AboutSection() {
                 </p>
                 
                 <p data-testid="about-research">
-                  My research focuses on multi-modal data fusion and attention mechanisms, with a paper 
-                  currently under review at IEEE. I'm passionate about leveraging IoT, sensor data fusion, 
+                  My research focuses on multi-modal data fusion and attention mechanisms. I'm passionate about leveraging IoT, sensor data fusion, 
                   and personalized interventions to design innovative systems that improve workplace health 
                   and productivity.
                 </p>
