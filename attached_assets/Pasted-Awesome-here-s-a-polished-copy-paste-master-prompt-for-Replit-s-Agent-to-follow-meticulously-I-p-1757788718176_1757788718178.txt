@@ -1,0 +1,325 @@
+Awesome—here’s a polished, copy-paste “master prompt” for Replit’s Agent to follow meticulously. I pulled content from your current site and your CV, and I’ve also baked in standout, modern features (dark/light theme, PWA, interactive/AI elements, accessible animations, SEO/Schema, etc.). Where helpful, I included the exact content to use so the agent doesn’t miss anything.
+
+---
+
+# 📌 Replit Agent Master Prompt — Build John Ezembu’s Portfolio (Data Scientist & AI Automation Engineer)
+
+**Your role:** You are a senior full-stack engineer and UX engineer. Build a production-grade, end-to-end personal portfolio for **John Ezembu** that showcases his work as a **Data Scientist & AI Automation Engineer**. Deliver clean, logical, well-architected code with excellent docs—no spaghetti code.
+
+---
+
+## 1) Goals & Guardrails
+
+* **Primary goal:** A world-class, blazing-fast, accessible portfolio that elevates John’s brand and converts viewers into leads (recruiters, collaborators, or clients).
+* **Non-negotiables:**
+
+  * Clean, modular code with a clear architecture and folder structure.
+  * TypeScript, strict types, and consistent linting/formatting.
+  * **Dark/Light mode toggle** with zero FOUC, respects system preferences; user choice persists. (Implement with App Router best practice.) ([GitHub][1])
+  * **Primary brand color:** `#A71E1E` as the **accent** color in both themes (ensure accessible contrast).
+  * SEO, structured data (Schema.org **Person**, **CreativeWork/Project**, **Article**), sitemap, robots, OpenGraph/Twitter images. ([Schema.org][2])
+  * **PWA**: installable, offline support, manifest, service worker, Lighthouse ≥95 on Mobile & Desktop. ([Next.js][3])
+  * **Animations**: tasteful micro-interactions; respect `prefers-reduced-motion` so users can disable motion. ([Framer][4])
+
+---
+
+## 2) Tech Stack
+
+* **Framework:** Next.js (App Router) + **TypeScript**
+* **Styling:** Tailwind CSS + CSS variables for theming; **shadcn/ui** for accessible components
+* **Animations:** Framer Motion (with reduced-motion guard) ([Framer][4])
+* **3D/Visuals (optional):** react-three-fiber / Three.js for hero or subtle background effects (keep perf budget tight)
+* **Content:** MDX for long-form (case studies/blog); YAML/JSON for projects data
+* **Analytics:** Privacy-friendly (e.g., Plausible)
+* **Testing:** Vitest/Jest (unit), Playwright (e2e)
+* **CI/CD:** GitHub Actions (lint, type-check, test, build)
+
+---
+
+## 3) Content to Ingest & Use (authoritative)
+
+### 3.1 From John’s current website (scrape and import)
+
+Use and refresh these to match the new structure:
+
+* **Name/Heading:** JOHN EZEMBU
+* **Tagline (update):** “Data Analyst / Data Engineer…” (revise to “Data Scientist & AI Automation Engineer” in new site)
+* **Projects currently listed:**
+
+  * Data Cleaning in SQL (SQL Server)
+  * Data Exploration in SQL (Global COVID-19)
+  * Tableau Dashboards (COVID-19, Housing, Financial Forecasting)
+  * Automated File Organizer (Python, `shutil`)
+  * BMI Calculator (Python)
+* **Contacts & Social:** Lagos, Nigeria; **Phone:** +234 704 911 0011; **Email:** [johnezembu12@gmail.com](mailto:johnezembu12@gmail.com); LinkedIn; GitHub. ([john-gram.github.io][5])
+
+### 3.2 From John’s CV (integrate prominently)
+
+Create rich case studies (problem → approach → stack → metrics → impact), then link them from the Projects page:
+
+* **Multi-Modal Data Fusion with Federated Multi-Head Attention for Diabetic Retinopathy Severity Classification** (Personal Research; in-view IEEE, Jul 2025)
+
+  * DR severity from fundus images + EHR; multi-head attention fusion; **Federated Learning** with FedML; attention heatmaps for clinician insight.
+* **Creditworthiness Prediction Model** (Python, scikit-learn, Power BI; Jan 2025)
+
+  * CatBoost/XGBoost/LogReg/RF; **SMOTE** for imbalance; **F1 = 87%**; SHAP explanations; dashboarded in Power BI.
+* **Real Estate Price Prediction** (Python, scikit-learn; Jul 2024)
+
+  * Linear regression, feature engineering; **R² = 0.89**; visualized results.
+* **COVID-19 Data Exploration** (SQL + viz; Sep 2023)
+
+  * 336k rows; CTEs; views; vaccine coverage metrics; ML model **accuracy 88%** and **lift 34%**; pandas/matplotlib/word cloud.
+* **Experience (show in a timeline with achievements):**
+
+  * **Retail Business Analyst, Meristem Securities Ltd.** (Feb 2025–present): +15% product uptake from Python/SQL analytics, Power BI dashboards (-30% reporting time), automation (-20% processing time).
+  * **Data Scientist, Verbum Networks** (Jan 2023–Jul 2024): Excel/VBA reporting (-50% time), weekly process reports, actionable dashboards.
+  * **Data Analyst, BOVAS & Company** (Jan 2022–Oct 2022): Real-time truck tracking (FLEETRAK + IoT), domain migration via scripting, system maintenance + reports.
+* **Volunteering (show impact):**
+
+  * Founder/Convener, Bowen Tech Week (sponsorships from MTN & Nexascale; multi-uni collab; invited top Nigerian tech creators).
+  * General Secretary, NACOS Bowen (records, comms, member DBs, stakeholder engagement).&#x20;
+
+> Include contact block (phone, email, LinkedIn, GitHub) and a short professional summary extracted from the CV; emphasize **Data Science**, **ML**, **GenAI/Agentic AI/RAG**, **Automation (n8n, Google AI Studio)**, **Data Integration**, **APIs/SQL**, **Python stack**.&#x20;
+
+---
+
+## 4) Pages & Information Architecture
+
+* **Home (Hero):** Bold hero with animated but subtle background; headline “Data Scientist & AI Automation Engineer”; concise value prop; **CTA buttons** (View Projects, Download CV, Contact).
+* **Projects:**
+
+  * Grid with filters (tags: ML, GenAI/Agents/RAG, Data Engineering, SQL, Visualization).
+  * Each project card → dedicated **Case Study** page with: overview, role, tools, dataset, method, experiments, metrics, visuals (plots/embeds), and **“What I’d improve next”**.
+  * Include all projects from §3.1 and §3.2.
+* **Experience:** Timeline with role, company, dates, outcomes/metrics (see CV).
+* **Research/Articles (MDX):** Room for short writeups on federated learning, RAG, DR attention maps, etc.
+* **About:** Biography, skills (Python, scikit-learn, PyTorch, SQL, APIs, n8n, RAG, GenAI), volunteer leadership.
+* **Contact:** Form with serverless handler (see Security); mailto fallback; social links.
+* **/uses (optional):** Tooling stack and setup (Jupyter, VS Code, libs).
+* **Sitemap/Robots:** Auto-generated.
+* **Assets:** Use **headshot** (you’ll receive `headshot.jpg` from user) in Hero/About with high-res responsive images and proper `<img alt="">`.
+
+---
+
+## 5) “Make-It-Pop” Features (tasteful but distinctive)
+
+Include several of these to stand out (don’t overdo; keep perf high):
+
+1. **AI “Ask Me Anything” widget (RAG):**
+
+   * In-site chat trained on John’s CV, site MDX, and projects metadata; answers FAQs (skills, tools, outcomes, contact).
+   * Use a serverless endpoint with vector store (e.g., local embeddings / open-source or API); secrets via env vars.
+
+2. **Interactive Data Vizzes:**
+
+   * Embed interactive charts (Plotly/ECharts) inside case studies—e.g., SHAP plots for the credit model, attention heatmap overlays for the DR project.
+
+3. **PWA Superpowers:**
+
+   * Installable app, offline access for static pages, caching for images and MDX, manifest + service worker per Next.js PWA guide. ([Next.js][3])
+
+4. **Dynamic OG Images:**
+
+   * Auto-generate OpenGraph images per project/post for rich link previews.
+
+5. **Micro-interactions & Reduced Motion:**
+
+   * Subtle transitions (buttons/cards), parallax under 10ms frame budget, and **respect `prefers-reduced-motion`** toggle. ([Framer][4])
+
+6. **3D Touch (optional):**
+
+   * A light, low-poly 3D accent in hero using react-three-fiber; ensure quick fallback on low-end devices (no blocking).
+   * Take inspiration from modern interactive portfolios & trends. ([thewebfactory][6])
+
+---
+
+## 6) Visual & Theming Requirements
+
+* **Accent color:** `#A71E1E` everywhere a highlight is needed (links, buttons, active tags, focus rings) in both themes.
+* **Typography:** System or high-quality variable font (reduce layout shift with `font-display: swap`).
+* **Dark/Light:**
+
+  * Respect system preference; provide a toggle (iconic switch in navbar); persist choice.
+  * Avoid theme FOUC; apply class on `<html>` before hydration. (Follow App Router guidance/discussion.) ([GitHub][1])
+
+---
+
+## 7) Accessibility, Performance, Security
+
+* **A11y:** WCAG 2.2 AA; semantic headings; skip-to-content; focus states; alt text everywhere; reduced motion support. ([Framer][4])
+* **Perf:**
+
+  * Lighthouse ≥95 (mobile & desktop), optimized images (`next/image`), route prefetching, cache headers, zero unused JS.
+* **SEO:** Titles/descriptions per page, canonical tags, JSON-LD for **Person/Project/Article**. ([Schema.org][2])
+* **Security:**
+
+  * Content Security Policy (CSP) headers; no secrets in client code; environment variables for any APIs (e.g., AI, analytics).
+  * Contact form via serverless function with captcha/honeypot; rate limit.
+
+---
+
+## 8) Data Model & Content Admin
+
+* **`/content/projects/*.json`** (or YAML): title, role, timeframe, stack, dataset, method, metrics, links, images, tags, slug.
+* **`/content/posts/*.mdx`**: MDX front-matter for articles/research.
+* Utility scripts to **add a new project** or **new post** (scaffold front-matter & OG image).
+* Populate initial content from §§3.1–3.2 (site + CV). ([john-gram.github.io][5])
+
+---
+
+## 9) Pages/Sections Copy (starting content)
+
+**Hero (headline):**
+“Hi, I’m **John Ezembu** — Data Scientist & AI Automation Engineer.”
+**Subtext:**
+“I build AI-powered analytics and automation that turn complex data into measurable business outcomes.”
+
+**CTA:** View Projects · Download CV · Contact
+
+**About (short):**
+
+* First-Class Honors in Computer Science (Bowen University).
+* Specialties: ML (scikit-learn, PyTorch), **GenAI/Agentic AI/RAG**, **workflow automation** (n8n, Google AI Studio), **APIs/SQL**, **data integration & governance**.&#x20;
+
+**Contact Block:**
+
+* Lagos, Nigeria · **+234 704 911 0011** · **[johnezembu12@gmail.com](mailto:johnezembu12@gmail.com)** · LinkedIn · GitHub. ([john-gram.github.io][5])
+
+> Replace/augment wording as needed for brevity and tone, but keep facts intact.
+
+---
+
+## 10) Deliverables
+
+1. **Source code** (TypeScript, Next.js App Router) with this structure:
+
+```
+/app
+  /(marketing)/[routes]
+  /(projects)/[slug]
+  /api/contact
+/lib
+/components
+/styles
+/content
+/public
+/tests
+```
+
+2. **README.md** with:
+
+   * Quick start (dev, build, test)
+   * Stack overview & reasoning
+   * Theming/dark mode approach
+   * Content model: how to add/edit projects/posts
+   * How the **RAG “Ask Me Anything”** widget works (data sources, embeddings, env vars)
+   * Deployment guides:
+
+     * **Vercel** (private repo), custom domain + DNS, preview protection (Basic Auth), environment variables, caching.
+     * **Cloudflare Pages** or **Netlify** alternative.
+     * **Private on my domain:** keep repo private; restrict indexing on staging (robots `noindex`), optionally password-protect previews; production domain with proper `A/AAAA` or CNAME; add TLS; set redirects.
+   * CI/CD (GitHub Actions)
+   * Testing commands (Vitest/Jest + Playwright)
+   * Performance & a11y checklist
+   * Maintenance: dependency updates, secrets rotation
+
+3. **Design tokens** (colors, spacing, radii, shadows) with `#A71E1E` as accent.
+
+4. **SEO assets:** sitemap.xml, robots.txt, dynamic OG images, JSON-LD for Person + Projects. ([Schema.org][2])
+
+5. **PWA**: manifest.json, service worker, install prompt, offline routes; include a section in README on testing PWA and clearing caches. ([Next.js][3])
+
+6. **Accessibility report** (note how reduced-motion is respected and what components were tested). ([Framer][4])
+
+---
+
+## 11) Assets & Branding
+
+* **Headshot:** expect a file named `headshot.jpg` (square or 4:5). Optimize responsive sizes (`next/image`).
+* **Favicon & app icons**: generate with brand accent; include dark/light variants.
+* **CV (PDF)**: include a download link; optionally render a web view.
+
+---
+
+## 12) QA & Acceptance Criteria
+
+* Build passes: **type-check, lint, tests**.
+* **Lighthouse** ≥95 (Performance, Best Practices, SEO, Accessibility) on mobile & desktop.
+* Works across modern browsers; graceful fallback when JS disabled for basic content.
+* Dark/Light toggle works without FOUC and persists choice. ([GitHub][1])
+* Schema validated (Person + Projects). ([Schema.org][2])
+* PWA installable; offline for key pages. ([Next.js][3])
+
+---
+
+## 13) Populate Initial Content (examples to prefill)
+
+**Projects (Cards → Case Studies):**
+
+* **Multi-Modal DR Severity (Federated Attention)** — fundus + EHR fusion; FedML; attention heatmaps; privacy-preserving training.
+* **Creditworthiness Prediction** — CatBoost/XGBoost/LogReg/RF; **F1 87%**; SHAP; Power BI dashboard.
+* **Real Estate Price Prediction** — linear regression; **R² 0.89**; feature engineering, visualizations.
+* **COVID-19 Data Exploration** — 336k rows; SQL CTEs/views; ML model **88% accuracy**/**34% lift**; pandas/matplotlib.
+* **Data Cleaning in SQL** (SQL Server)
+* **COVID-19 Exploration in SQL** (Global)
+* **Tableau Dashboards** (COVID-19, Housing, Financial Forecasting)
+* **Automated File Organizer (Python/shutil)**
+* **BMI Calculator (Python)**
+  (Sources: John’s site & CV—use as authoritative content.) ([john-gram.github.io][5])&#x20;
+
+**Experience (Timeline):**
+
+* Meristem Securities Ltd. — Retail Business Analyst (Feb 2025–present): +15% product uptake; -30% report time; -20% processing time.
+* Verbum Networks — Data Scientist (Jan 2023–Jul 2024).
+* BOVAS & Company — Data Analyst (Jan 2022–Oct 2022).&#x20;
+
+**Contact:** Lagos, Nigeria · +234 704 911 0011 · [johnezembu12@gmail.com](mailto:johnezembu12@gmail.com) · LinkedIn · GitHub. ([john-gram.github.io][5])
+
+---
+
+## 14) Extras (Optional, if time allows)
+
+* **Newsletter (Buttondown/ConvertKit)** with double opt-in.
+* **/talks page** if conference/meetups occur.
+* **/press kit**: short bio, photo, logos, color tokens.
+* **/api/resume.json** endpoint (machine-readable resume).
+
+---
+
+## 15) Handoff
+
+* Deliver source repo and deploy to a staging URL.
+* Provide final **README** walkthrough with screenshots/GIFs showing: theme toggle, PWA install, AI widget, adding a new project, and domain setup.
+
+---
+
+**Use the references below for specific implementation guidance:**
+
+* Dark mode with App Router + Tailwind (no FOUC). ([GitHub][1])
+* Next.js PWA guide (manifest, SW, offline). ([Next.js][3])
+* PWA tutorials & patterns. ([DEV Community][7])
+* Schema.org Person & structured data basics. ([Schema.org][2])
+* Accessible animation & reduced-motion considerations. ([Framer][4])
+* Portfolio trend inspirations (for tasteful 3D/motion). ([Elementor][8])
+
+---
+
+### Notes for the Agent
+
+* If any information conflicts, **prefer the CV and the explicit content above**.
+* Ask for `headshot.jpg` if not provided and wire it into the Hero/About.
+* Keep the codebase approachable: small, composable components; no over-abstraction.
+* Prioritize performance & a11y over flashy effects.
+
+---
+
+If you’d like, I can also tailor the copy tone and micro-copy (CTAs, project summaries) before you run this with Replit.
+
+[1]: https://github.com/vercel/next.js/discussions/53063?utm_source=chatgpt.com "Implementing a light/dark mode toggle with app router + RSC"
+[2]: https://schema.org/Person?utm_source=chatgpt.com "Person - Schema.org Type"
+[3]: https://nextjs.org/docs/app/guides/progressive-web-apps?utm_source=chatgpt.com "Guides: PWAs"
+[4]: https://www.framer.com/blog/website-animation-examples/?utm_source=chatgpt.com "11 strategic animation techniques to enhance UX ..."
+[5]: https://john-gram.github.io/JohnEzembu.github.io/ "John Ezembu's Portfolio"
+[6]: https://www.thewebfactory.us/blogs/25-stunning-interactive-website-examples-design-trends/?utm_source=chatgpt.com "25 Stunning Interactive Website Examples & Design ..."
+[7]: https://dev.to/stephengade/pwa-build-installable-nextjs-app-that-works-offline-3fff?utm_source=chatgpt.com "PWA: Build Installable Next.js App that Works Offline"
+[8]: https://elementor.com/blog/best-web-developer-portfolio-examples/?utm_source=chatgpt.com "Best Web Developer Portfolio Examples from Top ..."
