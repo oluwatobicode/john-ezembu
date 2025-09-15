@@ -112,7 +112,7 @@ export function AboutSection() {
                     </div>
                     <div className="flex items-center space-x-3" data-testid="contact-location">
                       <MapPin className="w-5 h-5 text-primary" />
-                      <span className="text-sm text-muted-foreground">Lagos, Nigeria</span>
+                      <span className="text-sm text-muted-foreground">Conley, USA</span>
                     </div>
                   </div>
                 </CardContent>

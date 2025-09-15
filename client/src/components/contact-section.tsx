@@ -128,7 +128,7 @@ export function ContactSection() {
                     </div>
                     <div>
                       <p className="font-medium text-foreground">Location</p>
-                      <p className="text-muted-foreground">Lagos, Nigeria</p>
+                      <p className="text-muted-foreground">Conley, USA</p>
                     </div>
                   </div>
                 </div>

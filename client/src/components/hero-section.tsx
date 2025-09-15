@@ -126,7 +126,7 @@ export function HeroSection() {
                 <div className="absolute -bottom-4 -left-4 bg-card border border-border rounded-lg p-3 shadow-lg">
                   <div className="flex items-center space-x-2" data-testid="location-badge">
                     <MapPin className="w-5 h-5 text-primary" />
-                    <span className="text-sm font-medium">Lagos, Nigeria</span>
+                    <span className="text-sm font-medium">Conley, USA</span>
                   </div>
                 </div>
               </div>
